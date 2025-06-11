@@ -20,7 +20,11 @@ export default function CalculatePage() {
 
   const handleChange = (index: number, field: keyof Item, value: string) => {
     const updated = [...items];
-    updated[index][field] = value;
+    if (field === "type") {
+      updated[index][field] = value as Item["type"];
+    } else {
+      updated[index][field] = value;
+    }
     setItems(updated);
   };
 
