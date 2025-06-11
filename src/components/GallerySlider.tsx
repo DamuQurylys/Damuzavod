@@ -12,10 +12,10 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 interface GallerySliderProps {
   images: string[];
   activeIndex?: number;
-  title?: string;
+  alt?: string;
 }
 
-export default function GallerySlider({ images, activeIndex, title = 'Фото товара' }: GallerySliderProps) {
+export default function GallerySlider({ images, activeIndex, alt = 'Фото товара' }: GallerySliderProps) {
   const [index, setIndex] = useState(0);
   const [open, setOpen] = useState(false);
 
@@ -69,7 +69,7 @@ export default function GallerySlider({ images, activeIndex, title = 'Фото �
             <div key={i} className="aspect-[4/3] relative w-full h-[300px] sm:h-[400px]">
               <Image
                 src={src}
-                alt={`${title} ${i + 1}`}
+                alt={`${alt} ${i + 1}`}
                 fill
                 className="rounded-lg object-cover cursor-zoom-in"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -83,7 +83,7 @@ export default function GallerySlider({ images, activeIndex, title = 'Фото �
         open={open}
         close={() => setOpen(false)}
         index={index}
-        slides={images.map((src, i) => ({ src, alt: `${title} ${i + 1}` }))}
+        slides={images.map((src, i) => ({ src, alt: `${alt} ${i + 1}` }))}
         plugins={[Thumbnails]}
         on={{ view: ({ index: i }) => setIndex(i) }}
       />
