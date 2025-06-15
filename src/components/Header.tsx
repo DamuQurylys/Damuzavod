@@ -24,8 +24,8 @@ export default function Header() {
 
   return (
     <header
-      className={`bg-white sticky top-0 z-50 transition-all duration-300 ease-in-out ${
-        scrolled ? 'py-1 shadow-sm' : 'py-4 shadow'
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out ${
+        scrolled ? 'bg-white shadow-sm py-1' : 'bg-transparent py-4'
       } px-4 sm:px-6`}
     >
       <div className="flex justify-between items-center">
@@ -61,18 +61,18 @@ export default function Header() {
           <Link href="/contacts">Контакты</Link>
         </nav>
 
-        {/* Контакты + Соц.сети (десктоп) */}
+        {/* Контакты и соцсети (десктоп) */}
         <div className="hidden md:flex items-center space-x-4">
-          <a href="https://wa.me/77007180338" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <a href="https://wa.me/77001234567" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
             <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={24} height={24} />
           </a>
-          <a href="https://t.me/damuzavod" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+          <a href="https://t.me/damu_qurylys" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
             <Image src="/icons/telegram.svg" alt="Telegram" width={24} height={24} />
           </a>
-          <a href="https://instagram.com/damuzavod" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <a href="https://instagram.com/damu_qurylys" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <Image src="/icons/instagram.svg" alt="Instagram" width={24} height={24} />
           </a>
-          <a href="tel:+77007180338" className="text-blue-600 font-semibold text-sm">
+          <a href="tel:+77001234567" className="text-blue-600 font-semibold text-sm">
             +7 700 718 03 38
           </a>
           <button className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">
