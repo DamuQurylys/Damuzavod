@@ -21,18 +21,23 @@ export default function Hero({
 }: HeroProps) {
   return (
     <section
-      className="relative w-full min-h-screen bg-cover bg-center text-white pt-[120px] pb-16 px-4"
+      className="relative w-full min-h-[80vh] bg-cover bg-center text-white pt-[120px] pb-24 px-4"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      {/* Затемняющий слой */}
+      {/* Затемнение фона */}
       <div className="absolute inset-0 bg-black bg-opacity-50" />
 
-      {/* Контент поверх фона */}
+      {/* Контент поверх затемнённого фона */}
       <div className="relative z-10 max-w-3xl mx-auto text-center space-y-4">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">{title}</h1>
-        {subtitle && <p className="text-base sm:text-lg">{subtitle}</p>}
 
-        {children && <div>{children}</div>}
+        {subtitle && (
+          <p className="text-base sm:text-lg">{subtitle}</p>
+        )}
+
+        {children && (
+          <div>{children}</div>
+        )}
 
         {buttons && (
           <div className="flex flex-wrap justify-center gap-4 pt-4">
