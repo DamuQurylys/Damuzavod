@@ -66,7 +66,7 @@ export default function Header() {
           <a href="https://wa.me/77007180338" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
             <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={24} height={24} />
           </a>
-          <a href="https://t.me/damu_qurylys" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+          <a href="https://t.me/damuzavod" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
             <Image src="/icons/telegram.svg" alt="Telegram" width={24} height={24} />
           </a>
           <a href="https://instagram.com/damuzavod" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
