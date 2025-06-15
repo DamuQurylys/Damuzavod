@@ -18,20 +18,26 @@ export default function Header() {
 
   return (
     <header
-      className={`bg-white sticky top-0 z-50 transition-all duration-300 ${
+      className={`bg-white sticky top-0 z-50 transition-all duration-300 ease-in-out ${
         scrolled ? 'py-1 shadow-sm' : 'py-4 shadow'
       } px-4 sm:px-6`}
     >
       <div className="flex justify-between items-center">
         {/* Логотип */}
         <Link href="/" className="flex items-center">
-          <Image
-            src="/logo.svg"
-            alt="Damu Qurylys — тротуарная плитка и бетонные изделия"
-            width={scrolled ? 100 : 160}
-            height={scrolled ? 40 : 60}
-            priority
-          />
+          <div
+            className={`relative transition-all duration-300 ease-in-out ${
+              scrolled ? 'w-[100px] h-[40px]' : 'w-[160px] h-[60px]'
+            }`}
+          >
+            <Image
+              src="/logo.svg"
+              alt="Damu Qurylys — Завод тротуарной плитки, брусчатки, бордюров и поребриков"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
         </Link>
 
         {/* Навигация (десктоп) */}
