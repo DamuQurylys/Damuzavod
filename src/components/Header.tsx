@@ -63,16 +63,16 @@ export default function Header() {
 
         {/* Контакты + Соц.сети (десктоп) */}
         <div className="hidden md:flex items-center space-x-4">
-          <a href="https://wa.me/77001234567" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <a href="https://wa.me/77007180338" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
             <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={24} height={24} />
           </a>
           <a href="https://t.me/damu_qurylys" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
             <Image src="/icons/telegram.svg" alt="Telegram" width={24} height={24} />
           </a>
-          <a href="https://instagram.com/damu_qurylys" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <a href="https://instagram.com/damuzavod" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <Image src="/icons/instagram.svg" alt="Instagram" width={24} height={24} />
           </a>
-          <a href="tel:+77001234567" className="text-blue-600 font-semibold text-sm">
+          <a href="tel:+77007180338" className="text-blue-600 font-semibold text-sm">
             +7 700 718 03 38
           </a>
           <button className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">
