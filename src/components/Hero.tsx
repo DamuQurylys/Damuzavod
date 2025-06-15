@@ -21,41 +21,47 @@ export default function Hero({
 }: HeroProps) {
   return (
     <section
-      className="relative w-full min-h-[80vh] bg-cover bg-center text-white pt-[120px] pb-24 px-4"
+      className="relative w-full min-h-[80vh] bg-cover bg-center text-white pt-[120px] px-4"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Затемнение фона */}
       <div className="absolute inset-0 bg-black bg-opacity-50" />
 
       {/* Контент поверх затемнённого фона */}
-      <div className="relative z-10 max-w-3xl mx-auto text-center space-y-4">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">{title}</h1>
+      <div className="relative z-10 max-w-7xl mx-auto h-full flex items-center">
+        <div className="max-w-xl space-y-6 pl-4 sm:pl-8">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
+            Завод бетонных изделий
+          </h1>
 
-        {subtitle && (
-          <p className="text-base sm:text-lg">{subtitle}</p>
-        )}
+          <div className="flex gap-4 flex-wrap">
+            <a
+              href="/catalog"
+              className="group relative inline-block px-6 py-3 border border-white text-white text-sm sm:text-base font-medium overflow-hidden transition-all duration-300"
+            >
+              <span className="absolute inset-0 w-0 bg-white transition-all duration-300 group-hover:w-full z-0"></span>
+              <span className="relative z-10 group-hover:text-black transition-colors duration-300">
+                Каталог продукции
+              </span>
+            </a>
 
-        {children && (
-          <div>{children}</div>
-        )}
-
-        {buttons && (
-          <div className="flex flex-wrap justify-center gap-4 pt-4">
-            {buttons.map((btn, idx) => (
-              <a
-                key={idx}
-                href={btn.href}
-                className={
-                  btn.variant === 'secondary'
-                    ? 'bg-white text-gray-800 py-2 px-5 rounded-lg'
-                    : 'bg-blue-600 text-white py-2 px-5 rounded-lg'
-                }
-              >
-                {btn.label}
-              </a>
-            ))}
+            <a
+              href="/calculate"
+              className="group relative inline-block px-6 py-3 border border-white text-white text-sm sm:text-base font-medium overflow-hidden transition-all duration-300"
+            >
+              <span className="absolute inset-0 w-0 bg-white transition-all duration-300 group-hover:w-full z-0"></span>
+              <span className="relative z-10 group-hover:text-black transition-colors duration-300">
+                Рассчитать стоимость
+              </span>
+            </a>
           </div>
-        )}
+
+          {children && (
+            <div className="pt-4">
+              {children}
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );
