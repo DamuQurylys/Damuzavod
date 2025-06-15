@@ -26,7 +26,7 @@ export default function Header() {
         {/* Логотип */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/logo.png"
+            src="/logo.svg"
             alt="Damu Qurylys — тротуарная плитка и бетонные изделия"
             width={scrolled ? 100 : 160}
             height={scrolled ? 40 : 60}
