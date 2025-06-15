@@ -5,11 +5,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
+    const handleScroll = () => {
       const currentScroll = window.scrollY;
       if (currentScroll > 40 && !scrolled) {
         setScrolled(true);
@@ -18,19 +17,19 @@ export default function Header() {
       }
     };
 
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [scrolled]);
 
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out ${
-        scrolled ? 'bg-white shadow-sm py-1' : 'bg-transparent py-4'
+        scrolled ? 'bg-white text-black shadow-sm py-2' : 'bg-transparent text-white py-4'
       } px-4 sm:px-6`}
     >
-      <div className="flex justify-between items-center">
-        {/* Логотип */}
-        <Link href="/" className="flex items-center">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-start">
+        {/* Левый блок — логотип */}
+        <Link href="/" className="flex-shrink-0">
           <div
             className={`relative transition-all duration-300 ease-in-out ${
               scrolled ? 'w-[100px] h-[40px]' : 'w-[160px] h-[60px]'
@@ -46,74 +45,41 @@ export default function Header() {
           </div>
         </Link>
 
-        {/* Навигация (десктоп) */}
-        <nav
-          className={`hidden md:flex items-center space-x-6 transition-all duration-300 ${
-            scrolled ? 'text-sm' : 'text-base'
-          }`}
-        >
-          <Link href="/">Главная</Link>
-          <Link href="/about">О нас</Link>
-          <Link href="/catalog">Продукция</Link>
-          <Link href="/turnkey">Под ключ</Link>
-          <Link href="/calculate">Рассчитать</Link>
-          <Link href="/projects">Проекты</Link>
-          <Link href="/contacts">Контакты</Link>
-        </nav>
-
-        {/* Контакты и соцсети (десктоп) */}
-        <div className="hidden md:flex items-center space-x-4">
-          <a href="https://wa.me/77001234567" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-            <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={24} height={24} />
-          </a>
-          <a href="https://t.me/damu_qurylys" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
-            <Image src="/icons/telegram.svg" alt="Telegram" width={24} height={24} />
-          </a>
-          <a href="https://instagram.com/damu_qurylys" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <Image src="/icons/instagram.svg" alt="Instagram" width={24} height={24} />
-          </a>
-          <a href="tel:+77001234567" className="text-blue-600 font-semibold text-sm">
-            +7 700 718 03 38
-          </a>
-          <button className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">
-            Заказать звонок
-          </button>
-        </div>
-
-        {/* Бургер (мобилка) */}
-        <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden">
-          <Image
-            src={menuOpen ? '/icons/close.svg' : '/icons/menu.svg'}
-            alt={menuOpen ? 'Закрыть меню' : 'Открыть меню'}
-            width={28}
-            height={28}
-          />
-        </button>
-      </div>
-
-      {/* Мобильное меню */}
-      {menuOpen && (
-        <div className="md:hidden mt-4 space-y-4 text-sm font-medium">
-          <Link href="/" onClick={() => setMenuOpen(false)}>Главная</Link>
-          <Link href="/about" onClick={() => setMenuOpen(false)}>О нас</Link>
-          <Link href="/catalog" onClick={() => setMenuOpen(false)}>Продукция</Link>
-          <Link href="/turnkey" onClick={() => setMenuOpen(false)}>Под ключ</Link>
-          <Link href="/calculate" onClick={() => setMenuOpen(false)}>Рассчитать</Link>
-          <Link href="/projects" onClick={() => setMenuOpen(false)}>Проекты</Link>
-          <Link href="/contacts" onClick={() => setMenuOpen(false)}>Контакты</Link>
-          <div className="flex gap-4 pt-2">
-            <a href="https://wa.me/77001234567" aria-label="WhatsApp">
-              <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={20} height={20} />
+        {/* Правый блок */}
+        <div className="flex flex-col items-end gap-3 w-full md:w-auto mt-2 md:mt-0">
+          {/* Верхняя строка: соцсети, телефон, кнопка */}
+          <div className="flex items-center gap-6">
+            <a href="https://wa.me/77007180338" aria-label="WhatsApp">
+              <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={22} height={22} />
             </a>
-            <a href="https://t.me/damu_qurylys" aria-label="Telegram">
-              <Image src="/icons/telegram.svg" alt="Telegram" width={20} height={20} />
+            <a href="https://t.me/damuzavod" aria-label="Telegram">
+              <Image src="/icons/telegram.svg" alt="Telegram" width={22} height={22} />
             </a>
-            <a href="https://instagram.com/damu_qurylys" aria-label="Instagram">
-              <Image src="/icons/instagram.svg" alt="Instagram" width={20} height={20} />
+            <a href="https://instagram.com/damuzavod" aria-label="Instagram">
+              <Image src="/icons/instagram.svg" alt="Instagram" width={22} height={22} />
             </a>
+
+            <span className="text-sm font-medium whitespace-nowrap">
+              +7 700 718 03 38
+            </span>
+
+            <button className="text-sm font-semibold underline hover:opacity-80 transition whitespace-nowrap">
+              Заказать звонок
+            </button>
           </div>
+
+          {/* Нижняя строка: навигация */}
+          <nav className="flex gap-6 text-sm font-medium">
+            <Link href="/">Главная</Link>
+            <Link href="/about">О нас</Link>
+            <Link href="/catalog">Продукция</Link>
+            <Link href="/turnkey">Под ключ</Link>
+            <Link href="/calculate">Рассчитать</Link>
+            <Link href="/projects">Проекты</Link>
+            <Link href="/contacts">Контакты</Link>
+          </nav>
         </div>
-      )}
+      </div>
     </header>
   );
 }
