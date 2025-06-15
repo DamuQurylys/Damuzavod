@@ -32,7 +32,7 @@ export default function Header() {
         <Link href="/" className="flex-shrink-0">
           <div
             className={`relative transition-all duration-300 ease-in-out ${
-              scrolled ? 'w-[100px] h-[40px]' : 'w-[160px] h-[60px]'
+              scrolled ? 'w-[120px] h-[48px]' : 'w-[180px] h-[68px]'
             }`}
           >
             <Image
