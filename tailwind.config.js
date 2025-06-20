@@ -7,13 +7,13 @@ module.exports = {
     extend: {
       fontFamily: {
         // Основной шрифт по умолчанию для всего сайта
-        sans: ['Anton', 'sans-serif'],
+        sans: ['Manrope', 'sans-serif'],
 
         // Альтернативный шрифт (если решим использовать Inter для текста)
-        inter: ['Inter', 'sans-serif'],
+        inter: ['Manrope', 'sans-serif'],
 
         // Отдельно для заголовков, если понадобится сделать акцент
-        display: ['Anton', 'sans-serif'],
+        display: ['Manrope', 'sans-serif'],
       },
     },
   },
