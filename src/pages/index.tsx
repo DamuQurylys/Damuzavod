@@ -1,5 +1,10 @@
 // src/pages/index.tsx
-import { Carousel } from 'react-responsive-carousel';
+import dynamic from 'next/dynamic';
+
+const Carousel = dynamic(() =>
+  import('react-responsive-carousel').then(mod => mod.Carousel),
+  { ssr: false }
+) as any;
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Image from 'next/image';
 import Link from 'next/link';
