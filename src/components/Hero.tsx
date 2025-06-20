@@ -3,6 +3,7 @@
 import React from 'react';
 
 export interface HeroProps {
+  title?: string; // добавь эту строку
   backgroundImage: string;
   children?: React.ReactNode;
   buttons?: {
