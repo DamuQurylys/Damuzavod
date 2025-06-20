@@ -13,17 +13,19 @@ export default function Home() {
     <>
       {/* Hero-блок */}
       <Hero
-        title="Завод бетонных изделий"
-        subtitle="Гарантия 6 лет."
         backgroundImage="/hero/main-hero.webp"
+        buttons={[
+          { label: 'Каталог продукции', href: '/catalog' },
+          { label: 'Рассчитать стоимость', href: '/calculate', variant: 'secondary' },
+        ]}
       >
-        <div className="flex justify-center gap-4 flex-wrap">
-          <Link href="/catalog" className="bg-blue-600 text-white py-3 px-6 rounded-lg">
-            Каталог продукции
-          </Link>
-          <Link href="/calculate" className="bg-white text-gray-800 py-3 px-6 rounded-lg">
-            Рассчитать стоимость
-          </Link>
+        <div className="text-left max-w-xl ml-auto mr-0">
+          <h1 className="text-5xl sm:text-6xl font-bold leading-tight">
+            Завод бетонных изделий
+          </h1>
+          <p className="mt-4 text-lg sm:text-xl">
+            Гарантия 6 лет. Надёжность, проверенная временем.
+          </p>
         </div>
       </Hero>
 
