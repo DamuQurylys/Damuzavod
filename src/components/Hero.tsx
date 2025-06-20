@@ -30,8 +30,8 @@ export default function Hero({
       {/* Контент поверх затемнённого фона */}
       <div className="relative z-10 max-w-7xl mx-auto h-full flex items-center">
         <div className="max-w-xl space-y-6 pl-4 sm:pl-8">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
-            Завод бетонных изделий
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight whitespace-nowrap">
+           Завод бетонных изделий
           </h1>
 
           <div className="flex gap-4 flex-wrap">
