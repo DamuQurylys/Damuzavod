@@ -19,19 +19,7 @@ export default function Home() {
       {/* Hero-блок */}
       <Hero
         backgroundImage="/hero/main-hero.webp"
-        buttons={[
-          { label: 'Каталог продукции', href: '/catalog' },
-          { label: 'Рассчитать стоимость', href: '/calculate', variant: 'secondary' },
-        ]}
       >
-        <div className="text-left max-w-xl ml-auto mr-0">
-          <h1 className="text-5xl sm:text-6xl font-bold leading-tight">
-            Завод бетонных изделий
-          </h1>
-          <p className="mt-4 text-lg sm:text-xl">
-            Гарантия 6 лет. Надёжность, проверенная временем.
-          </p>
-        </div>
       </Hero>
 
       <main className="px-4 sm:px-6 md:px-8 py-12 space-y-16">
