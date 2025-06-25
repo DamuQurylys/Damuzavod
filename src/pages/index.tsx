@@ -24,7 +24,7 @@ export default function Home() {
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
           Завод вибропрессованной брусчатки
         </h1>
-        <p className="text-lg sm:text-xl">Гарантия 6 лет</p>
+        <p className="text-lg sm:text-xl">Тротуарная плитка, брусчатка, бордюры, поребрики</p>
       </Hero>
 
       <main className="px-4 sm:px-6 md:px-8 py-12 space-y-16">
