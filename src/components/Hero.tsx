@@ -19,7 +19,7 @@ const Hero: React.FC<HeroProps> = ({
 }) => {
   return (
     <section
-      className="relative w-full min-h-[80vh] bg-cover bg-center text-white pt-[100px] sm:pt-[120px] pb-24 px-4"
+      className="relative w-full min-h-[65vh] bg-cover bg-center text-white pt-[120px] pb-16 px-4"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Градиентное затемнение сверху */}

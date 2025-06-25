@@ -29,40 +29,20 @@ export default function Home() {
 
       <main className="px-4 sm:px-6 md:px-8 py-12 space-y-16">
         {/* Преимущества */}
-        <section className="py-12 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10">Почему выбирают нас</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center text-gray-800">
-              <div className="flex flex-col items-center space-y-3">
-                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-100">
-                  <span className="text-2xl">🏭</span>
-                </div>
-                <p className="font-medium">Современное оборудование</p>
-              </div>
-
-              <div className="flex flex-col items-center space-y-3">
-                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-100">
-                  <span className="text-2xl">⚙️</span>
-                </div>
-                <p className="font-medium">Собственное производство</p>
-              </div>
-
-              <div className="flex flex-col items-center space-y-3">
-                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-100">
-                  <span className="text-2xl">🚛</span>
-                </div>
-                <p className="font-medium">Доставка по всему Казахстану</p>
-              </div>
-
-              <div className="flex flex-col items-center space-y-3">
-                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-100">
-                  <span className="text-2xl">🛠️</span>
-                </div>
-                <p className="font-medium">Благоустройство под ключ</p>
-              </div>
+        <section className="bg-white -mt-6 pb-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 space-y-10">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800">
+              Качественная тротуарная плитка от производителя: наши преимущества
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-sm sm:text-base">
+              <div className="p-4 rounded-lg shadow bg-gray-50">⚙️ Автоматическая линия</div>
+              <div className="p-4 rounded-lg shadow bg-gray-50">✅ Гарантия 6 лет</div>
+              <div className="p-4 rounded-lg shadow bg-gray-50">💰 Цены без посредников</div>
+              <div className="p-4 rounded-lg shadow bg-gray-50">🔧 Благоустройство под ключ</div>
             </div>
           </div>
         </section>
+        
         {/* Популярные позиции */}
         <section id="catalog" className="space-y-6">
           <h2 className="text-2xl font-bold text-center">Популярные позиции</h2>
