@@ -22,8 +22,8 @@ const Hero: React.FC<HeroProps> = ({
       className="relative w-full min-h-[80vh] bg-cover bg-center text-white pt-[100px] sm:pt-[120px] pb-24 px-4"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      {/* Затемнение фона */}
-      <div className="absolute inset-0 bg-black bg-opacity-50" />
+      {/* Градиентное затемнение сверху */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-transparent" />
 
       {/* Контент внизу слева */}
       {children && (
