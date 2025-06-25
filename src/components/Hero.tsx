@@ -3,7 +3,6 @@
 import React from 'react';
 
 export interface HeroProps {
-  title?: string;
   backgroundImage: string;
   children?: React.ReactNode;
   buttons?: {
@@ -14,39 +13,33 @@ export interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({
-  title,
   backgroundImage,
   buttons,
   children,
 }) => {
   return (
     <section
-      className="relative w-full min-h-[80vh] bg-cover bg-center text-white pt-[120px] pb-24 px-4"
+      className="relative w-full min-h-[80vh] bg-cover bg-center text-white pt-[100px] sm:pt-[120px] pb-24 px-4"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Затемнение фона */}
       <div className="absolute inset-0 bg-black bg-opacity-50" />
 
-      {/* Основной контент — текст внизу слева */}
-      {(title || children) && (
-        <div className="absolute bottom-8 left-8 z-10 text-left text-white space-y-4 w-auto max-w-none">
-          {title && (
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-              {title}
-            </h1>
-          )}
-          {children && <div>{children}</div>}
+      {/* Контент внизу слева */}
+      {children && (
+        <div className="absolute bottom-8 left-4 sm:left-8 z-10 text-left space-y-4 max-w-[90%] sm:max-w-[60%]">
+          {children}
         </div>
       )}
 
-      {/* Кнопки — в правом нижнем углу */}
+      {/* Кнопки — внизу справа */}
       {buttons && (
-        <div className="absolute bottom-8 right-8 z-10 flex flex-wrap justify-end gap-4">
+        <div className="absolute bottom-8 right-4 sm:right-8 z-10 flex flex-wrap justify-end gap-4">
           {buttons.map((btn, idx) => (
             <a
               key={idx}
               href={btn.href}
-              className="relative overflow-hidden border border-white text-white px-6 py-2 rounded-lg transition-all duration-300 group"
+              className="relative overflow-hidden border border-white text-white px-5 sm:px-6 py-2 rounded-xl transition-all duration-300 group text-sm sm:text-base"
             >
               <span className="relative z-10 group-hover:text-black transition-colors duration-300">
                 {btn.label}
@@ -59,7 +52,6 @@ const Hero: React.FC<HeroProps> = ({
           ))}
         </div>
       )}
-
     </section>
   );
 };

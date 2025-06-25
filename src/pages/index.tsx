@@ -17,18 +17,16 @@ export default function Home() {
   return (
     <>
       {/* Hero-блок */}
-      <Hero 
-        backgroundImage="/hero/main-hero.webp"
-        buttons={[
-          { label: 'Каталог продукции', href: '/catalog' },
-          { label: 'Рассчитать стоимость', href: '/calculate', variant: 'secondary' }
-        ]}
-      >
-        <div className="absolute bottom-8 left-8 z-10 space-y-2 text-left">
-          <h1 className="text-4xl md:text-5xl font-bold">Завод бетонных изделий</h1>
-          <p className="text-lg md:text-xl font-medium">Гарантия 6 лет.</p>
-        </div>
+       <Hero backgroundImage="/hero/main-hero.webp" buttons={[
+        { label: 'Каталог продукции', href: '/catalog' },
+        { label: 'Рассчитать стоимость', href: '/calculate' }
+      ]}>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+          Завод бетонных изделий
+        </h1>
+        <p className="text-lg sm:text-xl">Гарантия 6 лет.</p>
       </Hero>
+
 
 
       <main className="px-4 sm:px-6 md:px-8 py-12 space-y-16">
