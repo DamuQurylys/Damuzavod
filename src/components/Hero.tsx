@@ -29,7 +29,7 @@ const Hero: React.FC<HeroProps> = ({
 
       {/* Основной контент — текст внизу слева */}
       {(title || children) && (
-        <div className="absolute bottom-8 left-8 z-10 text-left text-white space-y-4">
+        <div className="absolute bottom-8 left-8 z-10 text-left text-white space-y-4 w-auto max-w-none">
           {title && (
             <h1 className="text-4xl md:text-5xl font-bold leading-tight">
               {title}
