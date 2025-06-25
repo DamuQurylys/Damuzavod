@@ -5,11 +5,16 @@ import Hero from '@/components/Hero';
 export default function About() {
   return (
     <>
-      <Hero
-        title="О компании Damu Qurylys"
-        subtitle="10 лет надёжного производства вибропрессованной брусчатки"
-        backgroundImage="/about-hero.jpg"
-      />
+      <Hero backgroundImage="/about-hero.jpg">
+        <div className="max-w-4xl mx-auto text-left space-y-4">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+            О компании Damu Qurylys
+          </h1>
+          <p className="text-lg md:text-xl font-medium">
+            10 лет надёжного производства вибропрессованной брусчатки
+          </p>
+        </div>
+      </Hero>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 space-y-16">
         {/* О компании */}

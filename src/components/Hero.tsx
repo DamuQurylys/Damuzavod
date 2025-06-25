@@ -3,7 +3,7 @@
 import React from 'react';
 
 export interface HeroProps {
-  title?: string; // добавь эту строку
+  title?: string;
   backgroundImage: string;
   children?: React.ReactNode;
   buttons?: {
@@ -14,6 +14,7 @@ export interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({
+  title,
   backgroundImage,
   buttons,
   children,
@@ -28,6 +29,11 @@ const Hero: React.FC<HeroProps> = ({
 
       {/* Основной контент */}
       <div className="relative z-10 max-w-5xl mx-auto text-left space-y-6">
+        {title && (
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+            {title}
+          </h1>
+        )}
         {children && <div>{children}</div>}
       </div>
 
