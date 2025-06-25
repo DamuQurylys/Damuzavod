@@ -57,6 +57,7 @@ const Hero: React.FC<HeroProps> = ({
           ))}
         </div>
       )}
+
     </section>
   );
 };
