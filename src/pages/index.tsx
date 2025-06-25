@@ -22,9 +22,9 @@ export default function Home() {
         { label: 'Рассчитать стоимость', href: '/calculate' }
       ]}>
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-          Завод бетонных изделий
+          Завод вибропрессованной брусчатки
         </h1>
-        <p className="text-lg sm:text-xl">Гарантия 6 лет.</p>
+        <p className="text-lg sm:text-xl">Автоматическое производство, гарантия 6 лет, доставка по РК</p>
       </Hero>
 
 
