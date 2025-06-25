@@ -62,11 +62,15 @@ export default function CalculatePage() {
 
   return (
     <>
-      <Hero
-        title="Рассчитать стоимость"
-        subtitle="Укажите количество продукции и получите предварительный расчёт стоимости"
-        backgroundImage="/catalog-hero.jpg"
-      />
+      <Hero backgroundImage="/catalog-hero.jpg">
+        <div className="max-w-4xl mx-auto text-left space-y-4">
+          <h1 className="text-4xl md:text-5xl font-bold">Рассчитать стоимость</h1>
+          <p className="text-lg md:text-xl font-medium">
+            Укажите количество продукции и получите предварительный расчёт стоимости
+          </p>
+        </div>
+      </Hero>
+
 
       <div className="space-y-12 max-w-2xl mx-auto w-full px-4 sm:px-6 py-12">
         <form onSubmit={handleSubmit} className="space-y-6">

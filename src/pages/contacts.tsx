@@ -6,11 +6,15 @@ import Hero from '@/components/Hero';
 export default function Contacts() {
   return (
     <>
-      <Hero
-        title="Контакты"
-        subtitle="Свяжитесь с нами любым удобным способом"
-        backgroundImage="/contacts-hero.jpg"
-      />
+      <Hero backgroundImage="/contacts-hero.jpg">
+        <div className="max-w-4xl mx-auto text-left space-y-4">
+          <h1 className="text-4xl md:text-5xl font-bold">Контакты</h1>
+          <p className="text-lg md:text-xl font-medium">
+            Свяжитесь с нами любым удобным способом
+          </p>
+        </div>
+      </Hero>
+
 
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
         <div className="grid md:grid-cols-2 gap-12 items-start">

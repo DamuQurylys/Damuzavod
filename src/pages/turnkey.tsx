@@ -4,11 +4,14 @@ import Hero from '@/components/Hero';
 export default function Turnkey() {
   return (
     <>
-      <Hero
-        title="Благоустройство под ключ"
-        subtitle="От производства до укладки — реализуем проект полностью силами нашей команды"
-        backgroundImage="/turnkey-hero.jpg"
-      />
+      <Hero backgroundImage="/turnkey-hero.jpg">
+        <div className="max-w-4xl mx-auto text-left space-y-4">
+          <h1 className="text-4xl md:text-5xl font-bold">Благоустройство под ключ</h1>
+          <p className="text-lg md:text-xl font-medium">
+            От производства до укладки — реализуем проект полностью силами нашей команды
+          </p>
+        </div>
+      </Hero>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
         {/* Заголовок страницы */}

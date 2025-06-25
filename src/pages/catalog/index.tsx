@@ -1,4 +1,3 @@
-// src/pages/catalog/index.tsx
 import Link from 'next/link';
 import Image from 'next/image';
 import { products } from '@/data/products';
@@ -7,11 +6,14 @@ import Hero from '@/components/Hero';
 export default function CatalogPage() {
   return (
     <>
-      <Hero
-        title="Каталог продукции"
-        subtitle="Вся наша продукция с характеристиками и примерами"
-        backgroundImage="/hero/catalog-hero.png"
-      />
+      <Hero backgroundImage="/hero/catalog-hero.png">
+        <div className="max-w-4xl mx-auto text-left space-y-4">
+          <h1 className="text-4xl md:text-5xl font-bold">Каталог продукции</h1>
+          <p className="text-lg md:text-xl font-medium">
+            Вся наша продукция с характеристиками и примерами
+          </p>
+        </div>
+      </Hero>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
         <div className="text-center space-y-4">

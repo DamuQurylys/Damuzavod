@@ -1,4 +1,3 @@
-// src/pages/projects/index.tsx
 import Image from 'next/image';
 import Link from 'next/link';
 import { projects } from '@/data/projects';
@@ -8,11 +7,14 @@ export default function Projects() {
   return (
     <>
       {/* Hero-блок */}
-      <Hero
-        title="Реализованные проекты"
-        subtitle="Готовые объекты с нашей брусчаткой и бетонными изделиями"
-        backgroundImage="/projects/projects-hero.jpg"
-      />
+      <Hero backgroundImage="/projects/projects-hero.jpg">
+        <div className="max-w-4xl mx-auto text-left space-y-4">
+          <h1 className="text-4xl md:text-5xl font-bold">Реализованные проекты</h1>
+          <p className="text-lg md:text-xl font-medium">
+            Готовые объекты с нашей брусчаткой и бетонными изделиями
+          </p>
+        </div>
+      </Hero>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
         <div className="text-center space-y-4">
@@ -39,8 +41,12 @@ export default function Projects() {
                 />
               </div>
               <div className="p-4 space-y-2">
-                <h2 className="text-lg sm:text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition">{project.title}</h2>
-                <p className="text-gray-600 text-sm sm:text-base leading-relaxed line-clamp-3">{project.description}</p>
+                <h2 className="text-lg sm:text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition">
+                  {project.title}
+                </h2>
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed line-clamp-3">
+                  {project.description}
+                </p>
               </div>
             </Link>
           ))}
