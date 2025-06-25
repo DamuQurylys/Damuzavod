@@ -27,15 +27,17 @@ const Hero: React.FC<HeroProps> = ({
       {/* Затемнение фона */}
       <div className="absolute inset-0 bg-black bg-opacity-50" />
 
-      {/* Основной контент */}
-      <div className="relative z-10 max-w-5xl mx-auto text-left space-y-6">
-        {title && (
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-            {title}
-          </h1>
-        )}
-        {children && <div>{children}</div>}
-      </div>
+      {/* Основной контент — текст внизу слева */}
+      {(title || children) && (
+        <div className="absolute bottom-8 left-8 z-10 text-left text-white space-y-4">
+          {title && (
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+              {title}
+            </h1>
+          )}
+          {children && <div>{children}</div>}
+        </div>
+      )}
 
       {/* Кнопки — в правом нижнем углу */}
       {buttons && (
