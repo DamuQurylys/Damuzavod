@@ -24,7 +24,7 @@ export default function Home() {
           { label: 'Рассчитать стоимость', href: '/calculate', variant: 'secondary' }
         ]}
       >
-        <div className="max-w-4xl mx-auto text-left space-y-4">
+        <div className="absolute bottom-8 left-8 z-10 space-y-2 text-left">
           <h1 className="text-4xl md:text-5xl font-bold">Завод бетонных изделий</h1>
           <p className="text-lg md:text-xl font-medium">Гарантия 6 лет.</p>
         </div>
