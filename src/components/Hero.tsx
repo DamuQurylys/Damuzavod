@@ -39,7 +39,7 @@ const Hero: React.FC<HeroProps> = ({
             <a
               key={idx}
               href={btn.href}
-              className="relative overflow-hidden border border-white text-white px-5 sm:px-6 py-2 rounded-xl transition-all duration-300 group text-sm sm:text-base"
+              className="relative overflow-hidden border border-white text-white px-6 py-2 rounded-xl transition-all duration-300 group text-sm sm:text-base"
             >
               <span className="relative z-10 group-hover:text-black transition-colors duration-300">
                 {btn.label}
