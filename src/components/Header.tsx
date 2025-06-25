@@ -70,13 +70,13 @@ export default function Header() {
 
           {/* Нижняя строка: навигация */}
           <nav className="flex gap-6 text-sm font-medium">
-            <Link href="/">Главная</Link>
-            <Link href="/about">О нас</Link>
-            <Link href="/catalog">Продукция</Link>
-            <Link href="/turnkey">Под ключ</Link>
-            <Link href="/calculate">Рассчитать</Link>
-            <Link href="/projects">Проекты</Link>
-            <Link href="/contacts">Контакты</Link>
+            <Link href="/" className="hover:text-amber-600 transition">Главная</Link>
+            <Link href="/about" className="hover:text-amber-600 transition">О нас</Link>
+            <Link href="/catalog" className="hover:text-amber-600 transition">Продукция</Link>
+            <Link href="/turnkey" className="hover:text-amber-600 transition">Под ключ</Link>
+            <Link href="/calculate" className="hover:text-amber-600 transition">Рассчитать</Link>
+            <Link href="/projects" className="hover:text-amber-600 transition">Проекты</Link>
+            <Link href="/contacts" className="hover:text-amber-600 transition">Контакты</Link>
           </nav>
         </div>
       </div>
