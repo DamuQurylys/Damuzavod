@@ -23,7 +23,7 @@ const Hero: React.FC<HeroProps> = ({
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Градиентное затемнение сверху */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-transparent" />
+      <div className="absolute top-0 left-0 w-full h-[250px] bg-gradient-to-b from-black/80 via-black/50 to-transparent pointer-events-none z-0" />
 
       {/* Контент внизу слева */}
       {children && (
