@@ -42,9 +42,9 @@ export default function Home() {
                 { icon: '/icons/advantages/factory-price.svg', title: 'Цены от завода' },
                 { icon: '/icons/advantages/turnkey.svg', title: 'Благоустройство под ключ' },
               ].map((item, i) => (
-                <div key={i} className="flex flex-col items-center gap-3 bg-gray-50 p-4 rounded-lg shadow">
-                  <img src={item.icon} alt={item.title} className="w-10 h-10" loading="lazy" />
-                  <span>{item.title}</span>
+                <div key={i} className="flex flex-col items-center gap-3">
+                 <img src={item.icon} alt={item.title} className="w-10 h-10" loading="lazy" />
+                 <span className="text-gray-800 font-medium">{item.title}</span>
                 </div>
               ))}
             </div>
