@@ -34,15 +34,23 @@ export default function Home() {
             <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800">
               Качественная тротуарная плитка от производителя: наши преимущества
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-sm sm:text-base">
-              <div className="p-4 rounded-lg shadow bg-gray-50">⚙️ Автоматическая линия</div>
-              <div className="p-4 rounded-lg shadow bg-gray-50">✅ Гарантия 6 лет</div>
-              <div className="p-4 rounded-lg shadow bg-gray-50">💰 Цены без посредников</div>
-              <div className="p-4 rounded-lg shadow bg-gray-50">🔧 Благоустройство под ключ</div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-center text-sm sm:text-base">
+              {[
+                { icon: '/icons/advantages/automation.svg', title: 'Автоматизированное производство' },
+                { icon: '/icons/advantages/warranty.svg', title: 'Гарантия 5 лет' },
+                { icon: '/icons/advantages/certificate.svg', title: 'Наличие сертификатов' },
+                { icon: '/icons/advantages/factory-price.svg', title: 'Цены от завода' },
+                { icon: '/icons/advantages/turnkey.svg', title: 'Благоустройство под ключ' },
+              ].map((item, i) => (
+                <div key={i} className="flex flex-col items-center gap-3 bg-gray-50 p-4 rounded-lg shadow">
+                  <img src={item.icon} alt={item.title} className="w-10 h-10" loading="lazy" />
+                  <span>{item.title}</span>
+                </div>
+              ))}
             </div>
           </div>
         </section>
-        
+
         {/* Популярные позиции */}
         <section id="catalog" className="space-y-6">
           <h2 className="text-2xl font-bold text-center">Популярные позиции</h2>
